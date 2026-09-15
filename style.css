@@ -66,7 +66,7 @@ ol.steps li::marker { color: var(--accent); font-weight: 600; }
 .demo-video { display: block; width: 100%; max-width: 960px; height: auto; margin: 24px auto 0; border-radius: 14px; border: 1px solid var(--line); box-shadow: 0 30px 60px -24px rgba(0, 0, 0, 0.45); background: #000; }
 
 /* Support and privacy pages */
-header.page { text-align: center; margin: 24px 0 40px; }
+header.page { text-align: left; margin: 24px 0 36px; }
 header.page img { width: 88px; height: 88px; border-radius: 20px; }
 header.page h1 { margin: 12px 0 4px; font-size: 32px; letter-spacing: -0.01em; }
 .tagline { margin: 0; font-size: 18px; color: var(--muted); }
