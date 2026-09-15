@@ -15,7 +15,7 @@
   <meta property="og:url" content="https://meterous.app/">
   <meta property="og:image" content="https://meterous.app/og.png">
   <meta name="twitter:card" content="summary_large_image">
-  <link rel="stylesheet" href="style.css?v=3">
+  <link rel="stylesheet" href="style.css?v=4">
 </head>
 <body>
 <div class="wrap">
@@ -30,10 +30,16 @@
       <span class="cta soon">Coming soon to the Mac App Store</span>
       <p class="fineprint">macOS 13 or later · Requires a Claude subscription</p>
     </div>
-    <picture class="hero-shot">
-      <source srcset="popup-dark.png" media="(prefers-color-scheme: dark)">
-      <img src="popup-light.png" width="300" height="265" alt="The Meterous popup: three meters for the current session, Fable, and weekly usage">
-    </picture>
+    <div class="hero-shot">
+      <video class="hero-video" autoplay muted loop playsinline poster="demo-hero-poster.png" width="440" height="350" aria-label="Clicking the Meterous icon in Safari's toolbar opens the three meters">
+        <source src="demo-hero.mp4" type="video/mp4">
+      </video>
+      <picture class="hero-still">
+        <source srcset="popup-dark.png" media="(prefers-color-scheme: dark)">
+        <img src="popup-light.png" width="300" height="265" alt="The Meterous popup: three meters for the current session, Fable, and weekly usage">
+      </picture>
+      <a class="demo-link" href="demo.mp4">Watch the full demo (14 s)</a>
+    </div>
   </section>
 
   <section class="features">
