@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Meterous – support</title>
+  <meta name="description" content="Setup steps and answers for Meterous, the Safari usage meter for Claude subscribers.">
+  <meta name="theme-color" content="#c96442">
+  <link rel="icon" href="icon.png">
+  <link rel="apple-touch-icon" href="icon.png">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Meterous">
+  <meta property="og:title" content="Meterous – support">
+  <meta property="og:description" content="Setup steps and answers for Meterous, the Safari usage meter for Claude subscribers.">
+  <meta property="og:url" content="https://meterous.app/support.html">
+  <meta property="og:image" content="https://meterous.app/og.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="wrap narrow">
+  <nav class="nav">
+    <a class="brand" href="index.html"><img src="icon.png" alt="">Meterous</a>
+    <div class="links"><a href="support.html">Support</a><a href="privacy.html">Privacy</a></div>
+  </nav>
+  <header class="page">
+    <img src="icon.png" alt="">
+    <h1>Support</h1>
+    <p class="tagline">Setting up Meterous, and answers to the usual questions.</p>
+  </header>
+
+  <h2>Setting up</h2>
+  <ol class="steps">
+    <li>Open Meterous once from your Applications folder.</li>
+    <li>In Safari, choose <strong>Settings → Extensions</strong> and tick <strong>Meterous</strong>.</li>
+    <li>Sign in to <a href="https://claude.ai">claude.ai</a> in Safari, if you aren't already.</li>
+    <li>Click the Meterous icon in the toolbar and allow it to use claude.ai.</li>
+  </ol>
+
+  <h2>Questions</h2>
+
+  <h3>What do the three meters show?</h3>
+  <p><strong>Current session</strong> is your 5-hour window. <strong>Fable</strong> is your weekly Fable allowance, if your plan has one. <strong>Weekly</strong> is your usage across all models for the week. Each shows the percentage used and when it resets; the toolbar badge shows your session, and the ring around the icon fills with your weekly usage.</p>
+
+  <h3>Why does Safari ask to allow Meterous on claude.ai?</h3>
+  <p>That permission is how Meterous reads your usage numbers: it makes the same request claude.ai's own Settings → Usage page makes, using the login already in Safari. It doesn't read or change anything else on the site.</p>
+
+  <h3>Is my data safe?</h3>
+  <p>Meterous has no servers, no analytics and no accounts. It never reads your conversations, and it never sees your password or login cookies. Your usage numbers are stored only on your Mac. Details in the <a href="privacy.html">privacy policy</a>.</p>
+
+  <h3>A meter says "Not reported for this account"</h3>
+  <p>claude.ai didn't report that limit for your plan. For example, only plans with a separate Fable allowance show the Fable meter. The other meters keep working.</p>
+
+  <h3>It says Safari isn't sharing my claude.ai login</h3>
+  <p>Open <a href="https://claude.ai">claude.ai</a> in a Safari tab and sign in if needed, then open Meterous again. Meterous refreshes from an open claude.ai tab when Safari won't share the login with the extension directly.</p>
+
+  <h3>The numbers look out of date</h3>
+  <p>Meterous refreshes every five minutes while Safari is running, right after a limit resets, and whenever you open it or click the refresh button next to "Updated". If claude.ai asks it to slow down, it waits ten minutes before trying again.</p>
+
+  <h3>Something's wrong. How do I report it?</h3>
+  <p>Hold <kbd>⌥ Option</kbd> and click the refresh button in the popup to copy a diagnostics summary, then email it to <a href="mailto:support@meterous.app?subject=Meterous">support@meterous.app</a>. The summary contains version numbers, percentages and error codes only; nothing that identifies you or your account.</p>
+
+  <h3>Is Meterous made by Anthropic?</h3>
+  <p>No. Meterous is an independent app and is not affiliated with, endorsed by, or sponsored by Anthropic. Claude is a trademark of Anthropic, PBC.</p>
+  <footer>
+    <div class="row">
+      <span>© 2026 Adam Mackey</span>
+      <span><a href="support.html">Support</a><a href="privacy.html">Privacy</a><a href="mailto:support@meterous.app">support@meterous.app</a></span>
+    </div>
+    <p class="legal">Meterous is an independent app, not affiliated with, endorsed by, or sponsored by Anthropic. Claude is a trademark of Anthropic, PBC.</p>
+  </footer>
+</div>
+</body>
+</html>
