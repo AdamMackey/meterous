@@ -15,7 +15,7 @@
   <meta property="og:url" content="https://meterous.app/">
   <meta property="og:image" content="https://meterous.app/og.png">
   <meta name="twitter:card" content="summary_large_image">
-  <link rel="stylesheet" href="style.css?v=5">
+  <link rel="stylesheet" href="style.css?v=6">
 </head>
 <body>
 <div class="wrap">
@@ -27,7 +27,10 @@
     <div>
       <h1>Your Claude limits, one click away.</h1>
       <p class="lead">Meterous puts your session, Fable and weekly usage in Safari's toolbar, with the exact time each one resets.</p>
-      <span class="cta soon">Coming soon to the Mac App Store</span>
+      <div class="cta-row">
+        <a class="cta" id="watch-demo" href="#demo">▶&#xFE0E;&nbsp; Watch the demo</a>
+        <span class="cta soon">Coming soon to the Mac App Store</span>
+      </div>
       <p class="fineprint">macOS 13 or later · Requires a Claude subscription</p>
     </div>
     <div class="hero-shot">
@@ -38,7 +41,6 @@
         <source srcset="popup-dark.png" media="(prefers-color-scheme: dark)">
         <img src="popup-light.png" width="300" height="265" alt="The Meterous popup: three meters for the current session, Fable, and weekly usage">
       </picture>
-      <a class="demo-link" href="#demo">See the full demo ↓</a>
     </div>
   </section>
 
@@ -92,5 +94,15 @@
     <p class="legal">Meterous is an independent app, not affiliated with, endorsed by, or sponsored by Anthropic. Claude is a trademark of Anthropic, PBC.</p>
   </footer>
 </div>
+<script>
+  // "Watch the demo": scroll to the player and start it (a click counts as a user gesture).
+  document.getElementById("watch-demo").addEventListener("click", (e) => {
+    const video = document.querySelector(".demo-video");
+    if (!video) return;
+    e.preventDefault();
+    video.scrollIntoView({ behavior: "smooth", block: "center" });
+    video.play().catch(() => {});
+  });
+</script>
 </body>
 </html>
