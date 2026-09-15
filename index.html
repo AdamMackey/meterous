@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Meterous – support</title>
+  <meta name="description" content="Meterous is a Safari extension that shows Claude subscribers how much of their session, Fable, and weekly usage limits they've used.">
+  <link rel="icon" href="icon.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+  <header>
+    <img src="icon.png" alt="">
+    <h1>Meterous</h1>
+    <p class="tagline">A usage meter for Claude subscribers, in your Safari toolbar.</p>
+  </header>
+
+  <p>Meterous shows three meters: your <strong>current session</strong>, your <strong>Fable</strong> limit, and your <strong>weekly</strong> limit across all models, each with the percentage used and when it resets. The toolbar badge shows your session at a glance; the ring around the icon fills with your weekly usage.</p>
+
+  <h2>Setting up</h2>
+  <ol class="steps">
+    <li>Open Meterous once from your Applications folder.</li>
+    <li>In Safari, choose <strong>Settings → Extensions</strong> and tick <strong>Meterous</strong>.</li>
+    <li>Sign in to <a href="https://claude.ai">claude.ai</a> in Safari, if you aren't already.</li>
+    <li>Click the Meterous icon in the toolbar and allow it to use claude.ai.</li>
+  </ol>
+
+  <h2>Questions</h2>
+
+  <h3>Why does Safari ask to allow Meterous on claude.ai?</h3>
+  <p>That permission is how Meterous reads your usage numbers: it makes the same request claude.ai's own Settings → Usage page makes, using the login already in Safari. It doesn't read or change anything else on the site.</p>
+
+  <h3>Is my data safe?</h3>
+  <p>Meterous has no servers, no analytics and no accounts. It never reads your conversations, and it never sees your password or login cookies. Your usage numbers are stored only on your Mac. Details in the <a href="privacy.html">privacy policy</a>.</p>
+
+  <h3>A meter says "Not reported for this account"</h3>
+  <p>claude.ai didn't report that limit for your plan. For example, only plans with a separate Fable allowance show the Fable meter. The other meters keep working.</p>
+
+  <h3>It says Safari isn't sharing my claude.ai login</h3>
+  <p>Open <a href="https://claude.ai">claude.ai</a> in a Safari tab and sign in if needed, then open Meterous again. Meterous refreshes from an open claude.ai tab when Safari won't share the login with the extension directly.</p>
+
+  <h3>The numbers look out of date</h3>
+  <p>Meterous refreshes every five minutes while Safari is running, right after a limit resets, and whenever you open it or click the refresh button next to "Updated". If claude.ai asks it to slow down, it waits ten minutes before trying again.</p>
+
+  <h3>Something's wrong. How do I report it?</h3>
+  <p>Hold <kbd>⌥ Option</kbd> and click the refresh button in the popup to copy a diagnostics summary, then email it to <a href="mailto:adam.mackey@icloud.com?subject=Meterous">adam.mackey@icloud.com</a>. The summary contains version numbers, percentages and error codes only; nothing that identifies you or your account.</p>
+
+  <h3>Is Meterous made by Anthropic?</h3>
+  <p>No. Meterous is an independent app and is not affiliated with, endorsed by, or sponsored by Anthropic. Claude is a trademark of Anthropic, PBC.</p>
+
+  <footer>
+    <p><a href="privacy.html">Privacy policy</a> · © 2026 Adam Mackey</p>
+  </footer>
+</main>
+</body>
+</html>
