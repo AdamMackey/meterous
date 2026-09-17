@@ -30,22 +30,25 @@ a { color: var(--accent); }
 
 /* Home: hero */
 .hero { display: grid; grid-template-columns: 1.1fr 1fr; gap: 48px; align-items: center; padding: 56px 0 64px; }
-.hero h1 { margin: 0 0 14px; font-size: 48px; line-height: 1.1; letter-spacing: -0.02em; text-wrap: balance; }
-.lead { margin: 0 0 26px; font-size: 19px; color: var(--muted); }
+.hero h1 { margin: 0 0 16px; font-size: 56px; line-height: 1.06; letter-spacing: -0.025em; text-wrap: balance; }
+.lead { margin: 0 0 28px; font-size: 20px; color: var(--muted); }
 .cta { display: inline-block; padding: 12px 20px; border-radius: 10px; background: var(--accent); color: #fff; text-decoration: none; font-weight: 600; }
 .cta:hover { filter: brightness(1.06); }
 .cta.soon { background: var(--card); color: var(--muted); border: 1px solid var(--line); font-weight: 500; }
 .cta-row { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; }
 .fineprint { margin: 14px 0 0; font-size: 14px; color: var(--muted); }
-.hero-shot { margin: 0; justify-self: center; }
-.hero-shot img { display: block; width: 300px; max-width: 100%; height: auto; border-radius: 14px; border: 1px solid var(--line); box-shadow: 0 30px 60px -24px rgba(0, 0, 0, 0.45); }
+/* A soft clay glow gives the popup some depth without adding anything to look at. */
+.hero-shot { position: relative; margin: 0; justify-self: center; }
+.hero-shot::before { content: ""; position: absolute; inset: -70px -90px; z-index: 0; pointer-events: none; background: radial-gradient(closest-side, color-mix(in srgb, var(--accent) 17%, transparent), transparent); }
+.hero-shot picture { position: relative; z-index: 1; display: block; }
+.hero-shot img { display: block; width: 340px; max-width: 100%; height: auto; border-radius: 14px; border: 1px solid var(--line); box-shadow: 0 30px 60px -24px rgba(0, 0, 0, 0.45); }
 /* One slim line under the hero: what the toolbar icon is telling you. */
-.toolbar-note { display: flex; align-items: center; justify-content: center; gap: 18px; margin: 0 0 20px; padding: 10px 22px 10px 18px; border-radius: 14px; background: var(--card); border: 1px solid var(--line); }
+.toolbar-note { display: flex; align-items: center; justify-content: center; gap: 18px; margin: 0 0 72px; padding: 10px 22px 10px 18px; border-radius: 14px; background: var(--card); border: 1px solid var(--line); }
 .toolbar-note p { margin: 0; color: var(--muted); font-size: 15px; }
 .toolbar-note strong { color: var(--text); font-weight: 600; }
 
 /* Home: features and steps */
-.features { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; padding-bottom: 72px; }
+.features { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; padding-bottom: 20px; }
 .feature { padding: 22px; border-radius: 14px; background: var(--card); border: 1px solid var(--line); }
 .feature svg { display: block; width: 32px; height: 32px; margin-bottom: 14px; color: var(--accent); }
 /* The real toolbar icon, as Safari draws it on most sites: grey ring (weekly), red badge (session). */
