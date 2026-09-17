@@ -15,7 +15,7 @@
   <meta property="og:url" content="https://meterous.app/">
   <meta property="og:image" content="https://meterous.app/og.png">
   <meta name="twitter:card" content="summary_large_image">
-  <link rel="stylesheet" href="style.css?v=18">
+  <link rel="stylesheet" href="style.css?v=20">
 </head>
 <body>
 <div class="wrap">
@@ -33,6 +33,10 @@
       <p class="fineprint">Coming soon to the Mac App Store · macOS 13 or later · Requires a Claude subscription</p>
     </div>
     <div class="hero-shot">
+      <picture>
+        <source srcset="popup-dark.png" media="(prefers-color-scheme: dark)">
+        <img src="popup-light.png" width="300" height="265" alt="The Meterous popup: three meters for the current session, Fable, and weekly usage">
+      </picture>
       <aside class="toolbar-card">
         <svg class="toolbar-icon" viewBox="-4 0 60 44" width="60" height="44" role="img" aria-label="The Meterous toolbar icon: a ring partly filled, with a red badge reading 34">
           <rect class="tb-capsule" x="1" y="7" width="50" height="36" rx="18"/>
@@ -44,10 +48,6 @@
         <h3>In your toolbar</h3>
         <p>The badge is your current session. The ring fills with your weekly usage.</p>
       </aside>
-      <picture>
-        <source srcset="popup-dark.png" media="(prefers-color-scheme: dark)">
-        <img src="popup-light.png" width="300" height="265" alt="The Meterous popup: three meters for the current session, Fable, and weekly usage">
-      </picture>
     </div>
   </section>
 
