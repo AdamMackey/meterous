@@ -37,22 +37,18 @@ a { color: var(--accent); }
 .cta.soon { background: var(--card); color: var(--muted); border: 1px solid var(--line); font-weight: 500; }
 .cta-row { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; }
 .fineprint { margin: 14px 0 0; font-size: 14px; color: var(--muted); }
-.hero-shot { margin: 0; justify-self: center; text-align: center; }
-.hero-shot img, .hero-video { display: block; margin: 0 auto; max-width: 100%; height: auto; border-radius: 14px; border: 1px solid var(--line); box-shadow: 0 30px 60px -24px rgba(0, 0, 0, 0.45); }
-.hero-shot img { width: 300px; }
-.hero-video { width: 440px; background: #1c1c1c; }
-.hero-still { display: none; }
-@media (prefers-reduced-motion: reduce) {
-  .hero-video { display: none; }
-  .hero-still { display: block; }
-}
+.hero-shot { display: flex; flex-wrap: wrap; gap: 16px; align-items: flex-start; justify-content: center; margin: 0; }
+.hero-shot img { display: block; width: 300px; max-width: 100%; height: auto; border-radius: 14px; border: 1px solid var(--line); box-shadow: 0 30px 60px -24px rgba(0, 0, 0, 0.45); }
+.toolbar-card { width: 150px; padding: 16px 16px 18px; border-radius: 14px; background: var(--card); border: 1px solid var(--line); }
+.toolbar-card h3 { margin: 10px 0 4px; font-size: 14px; }
+.toolbar-card p { margin: 0; font-size: 13px; line-height: 1.45; color: var(--muted); }
 
 /* Home: features and steps */
 .features { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; padding-bottom: 72px; }
 .feature { padding: 22px; border-radius: 14px; background: var(--card); border: 1px solid var(--line); }
 .feature svg { display: block; width: 32px; height: 32px; margin-bottom: 14px; color: var(--accent); }
 /* The real toolbar icon, as Safari draws it on most sites: grey ring (weekly), red badge (session). */
-.feature svg.toolbar-icon { width: 60px; height: 44px; margin: -12px 0 14px -1px; }
+.toolbar-icon { display: block; width: 60px; height: 44px; margin: -6px 0 0 -1px; }
 .tb-capsule { fill: var(--line); opacity: 0.55; }
 .tb-track { stroke: var(--muted); opacity: 0.35; }
 .tb-arc { stroke: var(--text); opacity: 0.75; }
@@ -91,6 +87,9 @@ footer a:hover { color: var(--text); }
 footer .legal { margin: 10px 0 0; font-size: 13px; }
 
 @media (max-width: 760px) {
+  .toolbar-card { width: 300px; display: grid; grid-template-columns: 60px 1fr; column-gap: 12px; align-items: center; }
+  .toolbar-card .toolbar-icon { grid-row: span 2; margin: 0; }
+  .toolbar-card h3 { margin: 0 0 2px; }
   .hero { grid-template-columns: 1fr; gap: 32px; padding: 24px 0 48px; }
   .hero h1 { font-size: 36px; }
   .features, .howto { grid-template-columns: 1fr; }

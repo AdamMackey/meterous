@@ -15,7 +15,7 @@
   <meta property="og:url" content="https://meterous.app/">
   <meta property="og:image" content="https://meterous.app/og.png">
   <meta name="twitter:card" content="summary_large_image">
-  <link rel="stylesheet" href="style.css?v=12">
+  <link rel="stylesheet" href="style.css?v=14">
 </head>
 <body>
 <div class="wrap">
@@ -33,10 +33,18 @@
       <p class="fineprint">Coming soon to the Mac App Store · macOS 13 or later · Requires a Claude subscription</p>
     </div>
     <div class="hero-shot">
-      <video class="hero-video" autoplay muted loop playsinline poster="demo-hero-poster.png" width="440" height="350" aria-label="Clicking the Meterous icon in Safari's toolbar opens the three meters">
-        <source src="demo-hero.mp4" type="video/mp4">
-      </video>
-      <picture class="hero-still">
+      <aside class="toolbar-card">
+        <svg class="toolbar-icon" viewBox="0 0 60 44" width="60" height="44" role="img" aria-label="The Meterous toolbar icon: a ring partly filled, with a red badge reading 34">
+          <rect class="tb-capsule" x="1" y="7" width="50" height="36" rx="18"/>
+          <circle class="tb-track" cx="26" cy="25" r="8.6" fill="none" stroke-width="3.8"/>
+          <circle class="tb-arc" cx="26" cy="25" r="8.6" fill="none" stroke-width="3.8" stroke-linecap="round" stroke-dasharray="38.9 54" transform="rotate(-90 26 25)"/>
+          <rect class="tb-badge" x="33" y="3" width="21" height="17" rx="8.5"/>
+          <text class="tb-badge-text" x="43.5" y="15.4" text-anchor="middle">34</text>
+        </svg>
+        <h3>In your toolbar</h3>
+        <p>The badge is your current session. The ring fills with your weekly usage.</p>
+      </aside>
+      <picture>
         <source srcset="popup-dark.png" media="(prefers-color-scheme: dark)">
         <img src="popup-light.png" width="300" height="265" alt="The Meterous popup: three meters for the current session, Fable, and weekly usage">
       </picture>
@@ -45,15 +53,9 @@
 
   <section class="features">
     <div class="feature">
-      <svg class="toolbar-icon" viewBox="0 0 60 44" width="60" height="44" role="img" aria-label="The Meterous toolbar icon: a ring partly filled, with a red badge reading 17">
-        <rect class="tb-capsule" x="1" y="7" width="50" height="36" rx="18"/>
-        <circle class="tb-track" cx="26" cy="25" r="8.6" fill="none" stroke-width="3.8"/>
-        <circle class="tb-arc" cx="26" cy="25" r="8.6" fill="none" stroke-width="3.8" stroke-linecap="round" stroke-dasharray="21.1 54" transform="rotate(-90 26 25)"/>
-        <rect class="tb-badge" x="33" y="3" width="21" height="17" rx="8.5"/>
-        <text class="tb-badge-text" x="43.5" y="15.4" text-anchor="middle">17</text>
-      </svg>
+      <svg viewBox="0 0 32 32" width="32" height="32" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" aria-hidden="true"><path d="M6 8h14M6 16h20M6 24h9"/></svg>
       <h3>Three meters, one glance</h3>
-      <p>Current session, Fable, and weekly across all models. In your toolbar, the badge is your current session and the ring fills with your weekly usage.</p>
+      <p>Current session, Fable, and weekly across all models. The toolbar badge shows your session without opening anything.</p>
     </div>
     <div class="feature">
       <svg viewBox="0 0 32 32" width="32" height="32" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" aria-hidden="true"><circle cx="16" cy="16" r="12"/><path d="M16 9v7l5 3"/></svg>
