@@ -37,15 +37,8 @@ a { color: var(--accent); }
 .cta.soon { background: var(--card); color: var(--muted); border: 1px solid var(--line); font-weight: 500; }
 .cta-row { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; }
 .fineprint { margin: 14px 0 0; font-size: 14px; color: var(--muted); }
-.hero-shot { margin: 0; justify-self: center; text-align: center; }
-.hero-shot img, .hero-video { display: block; margin: 0 auto; max-width: 100%; height: auto; border-radius: 14px; border: 1px solid var(--line); box-shadow: 0 30px 60px -24px rgba(0, 0, 0, 0.45); }
-.hero-shot img { width: 300px; }
-.hero-video { width: 440px; background: #1c1c1c; }
-.hero-still { display: none; }
-@media (prefers-reduced-motion: reduce) {
-  .hero-video { display: none; }
-  .hero-still { display: block; }
-}
+.hero-shot { margin: 0; justify-self: center; }
+.hero-shot img { display: block; width: 380px; max-width: 100%; height: auto; border-radius: 14px; border: 1px solid var(--line); box-shadow: 0 30px 60px -24px rgba(0, 0, 0, 0.45); }
 
 /* Home: features and steps */
 .features { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; padding-bottom: 72px; }
