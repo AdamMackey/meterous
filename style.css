@@ -40,7 +40,7 @@ a { color: var(--accent); }
 .hero-shot { margin: 0; justify-self: center; }
 .hero-shot img { display: block; width: 300px; max-width: 100%; height: auto; border-radius: 14px; border: 1px solid var(--line); box-shadow: 0 30px 60px -24px rgba(0, 0, 0, 0.45); }
 /* One slim line under the hero: what the toolbar icon is telling you. */
-.toolbar-note { display: flex; align-items: center; gap: 18px; margin: 0 0 20px; padding: 10px 22px 10px 18px; border-radius: 14px; background: var(--card); border: 1px solid var(--line); }
+.toolbar-note { display: flex; align-items: center; justify-content: center; gap: 18px; margin: 0 0 20px; padding: 10px 22px 10px 18px; border-radius: 14px; background: var(--card); border: 1px solid var(--line); }
 .toolbar-note p { margin: 0; color: var(--muted); font-size: 15px; }
 .toolbar-note strong { color: var(--text); font-weight: 600; }
 
