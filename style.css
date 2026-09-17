@@ -29,28 +29,27 @@ a { color: var(--accent); }
 .nav .links a:hover, .nav .links a[aria-current] { color: var(--text); }
 
 /* Home: hero */
-/* Same 40px of air on both sides of the popup: text | 40 | popup 300 | 40 | toolbar card 150. */
-.hero { display: grid; grid-template-columns: minmax(0, 1fr) 490px; gap: 40px; align-items: center; padding: 56px 0 72px; }
-.hero h1 { margin: 0 0 14px; font-size: 48px; line-height: 1.1; letter-spacing: -0.02em; }
+.hero { display: grid; grid-template-columns: 1.1fr 1fr; gap: 48px; align-items: center; padding: 56px 0 64px; }
+.hero h1 { margin: 0 0 14px; font-size: 48px; line-height: 1.1; letter-spacing: -0.02em; text-wrap: balance; }
 .lead { margin: 0 0 26px; font-size: 19px; color: var(--muted); }
 .cta { display: inline-block; padding: 12px 20px; border-radius: 10px; background: var(--accent); color: #fff; text-decoration: none; font-weight: 600; }
 .cta:hover { filter: brightness(1.06); }
 .cta.soon { background: var(--card); color: var(--muted); border: 1px solid var(--line); font-weight: 500; }
 .cta-row { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; }
 .fineprint { margin: 14px 0 0; font-size: 14px; color: var(--muted); }
-.hero-shot { display: flex; gap: 16px 40px; align-items: stretch; justify-content: center; margin: 0; }
+.hero-shot { margin: 0; justify-self: center; }
 .hero-shot img { display: block; width: 300px; max-width: 100%; height: auto; border-radius: 14px; border: 1px solid var(--line); box-shadow: 0 30px 60px -24px rgba(0, 0, 0, 0.45); }
-/* As tall as the popup beside it, with the icon and caption centered as one group. */
-.toolbar-card { display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; width: 150px; padding: 16px; border-radius: 14px; background: var(--card); border: 1px solid var(--line); }
-.toolbar-card h3 { margin: 10px 0 4px; font-size: 14px; }
-.toolbar-card p { margin: 0; font-size: 13px; line-height: 1.45; color: var(--muted); }
+/* One slim line under the hero: what the toolbar icon is telling you. */
+.toolbar-note { display: flex; align-items: center; gap: 18px; margin: 0 0 20px; padding: 10px 22px 10px 18px; border-radius: 14px; background: var(--card); border: 1px solid var(--line); }
+.toolbar-note p { margin: 0; color: var(--muted); font-size: 15px; }
+.toolbar-note strong { color: var(--text); font-weight: 600; }
 
 /* Home: features and steps */
 .features { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; padding-bottom: 72px; }
 .feature { padding: 22px; border-radius: 14px; background: var(--card); border: 1px solid var(--line); }
 .feature svg { display: block; width: 32px; height: 32px; margin-bottom: 14px; color: var(--accent); }
 /* The real toolbar icon, as Safari draws it on most sites: grey ring (weekly), red badge (session). */
-.toolbar-icon { display: block; width: 84px; height: 62px; margin: 0 0 6px; }
+.toolbar-icon { display: block; flex: none; width: 60px; height: 44px; margin-top: -4px; }
 .tb-capsule { fill: var(--line); opacity: 0.55; }
 .tb-track { stroke: var(--muted); opacity: 0.35; }
 .tb-arc { stroke: var(--text); opacity: 0.75; }
@@ -93,10 +92,6 @@ footer .legal { margin: 10px 0 0; font-size: 13px; }
 }
 
 @media (max-width: 760px) {
-  .hero-shot { flex-wrap: wrap; }
-  .toolbar-card { width: 300px; display: grid; grid-template-columns: 84px 1fr; column-gap: 12px; align-items: center; justify-content: start; text-align: left; padding: 16px; }
-  .toolbar-card .toolbar-icon { grid-row: span 2; margin: 0; }
-  .toolbar-card h3 { margin: 0 0 2px; }
   .hero { grid-template-columns: 1fr; gap: 32px; padding: 24px 0 48px; }
   .hero h1 { font-size: 36px; }
   .features, .howto { grid-template-columns: 1fr; }
