@@ -34,12 +34,11 @@ a { color: var(--accent); }
 .lead { margin: 0 0 28px; font-size: 20px; color: var(--muted); }
 .cta { display: inline-flex; align-items: center; gap: 9px; padding: 12px 20px; border-radius: 10px; background: var(--accent); color: #fff; text-decoration: none; font-weight: 600; }
 .cta svg { display: block; flex: none; }
+.cta.store { background: var(--card); color: var(--text); border: 1px solid var(--line); }
+.cta.store:hover { filter: none; border-color: var(--accent); }
 .cta:hover { filter: brightness(1.06); }
 .cta.soon { background: var(--card); color: var(--muted); border: 1px solid var(--line); font-weight: 500; }
 .cta-row { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; }
-.demo-link { margin: 16px 0 0; }
-.demo-link a { color: var(--text); font-weight: 600; text-decoration: none; }
-.demo-link a:hover { color: var(--accent); }
 .fineprint { margin: 14px 0 0; font-size: 14px; color: var(--muted); }
 /* A soft clay glow gives the popup some depth without adding anything to look at. */
 .hero-shot { position: relative; margin: 0; justify-self: center; }
