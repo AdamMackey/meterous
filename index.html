@@ -15,7 +15,7 @@
   <meta property="og:url" content="https://meterous.app/">
   <meta property="og:image" content="https://meterous.app/og.png">
   <meta name="twitter:card" content="summary_large_image">
-  <link rel="stylesheet" href="style.css?v=31">
+  <link rel="stylesheet" href="style.css?v=32">
 </head>
 <body>
 <div class="wrap">
@@ -27,10 +27,11 @@
     <div>
       <h1>Your Claude limits, one click away</h1>
       <p class="lead">Meterous puts your session, Fable and weekly usage in your browser's toolbar, with the exact time each one resets.</p>
-      <div class="cta-row">
-        <a class="cta" id="install" href="https://chromewebstore.google.com/detail/meterous/bdcgeladkdlilimaijoaopiglppfdfkc" rel="noopener">Add to Chrome · Free</a>
-        <a class="cta secondary" id="watch-demo" href="#demo">▶&#xFE0E;&nbsp; Watch the demo</a>
+      <div class="cta-row" id="installs">
+        <a class="cta" id="install-chrome" href="https://chromewebstore.google.com/detail/meterous/bdcgeladkdlilimaijoaopiglppfdfkc" rel="noopener">Add to Chrome · Free</a>
+        <a class="cta secondary" id="install-firefox" href="https://addons.mozilla.org/firefox/addon/meterous/" rel="noopener">Add to Firefox · Free</a>
       </div>
+      <p class="demo-link"><a id="watch-demo" href="#demo">▶&#xFE0E;&nbsp; Watch the demo</a></p>
       <p class="fineprint">Free for Chrome and Firefox · Safari coming soon · Requires a Claude subscription</p>
     </div>
     <div class="hero-shot">
@@ -109,9 +110,12 @@
   // Name the store the visitor can actually install from. Chrome is the default, and
   // Edge installs happily from the Chrome Web Store, so only Firefox needs redirecting.
   if (navigator.userAgent.includes("Firefox/")) {
-    const button = document.getElementById("install");
-    button.href = "https://addons.mozilla.org/firefox/addon/meterous/";
-    button.textContent = "Add to Firefox · Free";
+    // Put the visitor's own browser first and give it the filled button.
+    const chrome = document.getElementById("install-chrome");
+    const firefox = document.getElementById("install-firefox");
+    chrome.className = "cta secondary";
+    firefox.className = "cta";
+    document.getElementById("installs").prepend(firefox);
     const step = document.getElementById("store-link");
     step.href = "https://addons.mozilla.org/firefox/addon/meterous/";
     step.textContent = "Firefox Add-ons";
