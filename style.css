@@ -32,11 +32,11 @@ a { color: var(--accent); }
 .hero { display: grid; grid-template-columns: 1.1fr 1fr; gap: 48px; align-items: center; padding: 56px 0 64px; }
 .hero h1 { margin: 0 0 16px; font-size: 56px; line-height: 1.06; letter-spacing: -0.025em; text-wrap: balance; }
 .lead { margin: 0 0 28px; font-size: 20px; color: var(--muted); }
-.cta { display: inline-block; padding: 12px 20px; border-radius: 10px; background: var(--accent); color: #fff; text-decoration: none; font-weight: 600; }
+.cta { display: inline-flex; align-items: center; gap: 9px; padding: 12px 20px; border-radius: 10px; background: var(--accent); color: #fff; text-decoration: none; font-weight: 600; }
+.cta svg { display: block; flex: none; }
 .cta:hover { filter: brightness(1.06); }
 .cta.soon { background: var(--card); color: var(--muted); border: 1px solid var(--line); font-weight: 500; }
 .cta-row { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; }
-.cta.secondary { background: var(--card); color: var(--text); border: 1px solid var(--line); }
 .demo-link { margin: 16px 0 0; }
 .demo-link a { color: var(--text); font-weight: 600; text-decoration: none; }
 .demo-link a:hover { color: var(--accent); }
