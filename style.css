@@ -13,9 +13,12 @@
   --accent: #c96442;
   --band: #d97757;   /* the apps' clay: their icons' colour, and MackEye's --clay */
   --on-band: #fff;
+  --tb-bg: #e9e7e1;  /* the toolbar pictures in the state cards: button and glyph */
+  --tb-glyph: #55524b;
 }
 @media (prefers-color-scheme: dark) {
-  :root { --bg: #262624; --card: #2f2e2b; --text: #f0eee6; --muted: #a6a39a; --line: #3f3d39; --accent: #d97757; }
+  :root { --bg: #262624; --card: #2f2e2b; --text: #f0eee6; --muted: #a6a39a; --line: #3f3d39; --accent: #d97757;
+          --tb-bg: #171716; --tb-glyph: #d0cec8; }
 }
 * { box-sizing: border-box; }
 body {
@@ -97,6 +100,15 @@ a { color: var(--accent); }
 .hero-shot picture { display: block; }
 .hero-shot img { display: block; width: 340px; max-width: 100%; height: auto; border-radius: 14px; box-shadow: 0 30px 60px -20px rgba(31, 30, 27, 0.5); }
 
+/* Home: two cards under the band, each a picture of the toolbar icon and what it's saying.
+   Each site draws its own icon inside; .tb-bg is the toolbar button behind it. */
+.states { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; padding-bottom: 56px; }
+.state { display: flex; align-items: center; gap: 22px; margin: 0; padding: 20px 24px; border-radius: 14px; background: var(--card); border: 1px solid var(--line); }
+.state svg { flex: none; width: 132px; height: auto; }
+.tb-bg { fill: var(--tb-bg); }
+.state figcaption { font-size: 15px; color: var(--muted); }
+.state figcaption strong { display: block; margin-bottom: 3px; font-size: 17px; color: var(--text); }
+
 /* Home: features and steps */
 .features { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; padding-bottom: 20px; }
 .feature { padding: 22px; border-radius: 14px; background: var(--card); border: 1px solid var(--line); }
@@ -140,7 +152,7 @@ footer .legal { margin: 10px 0 0; font-size: 13px; }
 @media (max-width: 760px) {
   .hero { grid-template-columns: 1fr; gap: 32px; padding: 24px 0 48px; }
   .hero h1 { font-size: 36px; }
-  .features, .howto { grid-template-columns: 1fr; }
+  .states, .features, .howto { grid-template-columns: 1fr; }
 }
 
 /* Narrower than 360px the nav doesn't fit on one line, and the overflow clip cut off its last
@@ -158,19 +170,22 @@ footer .legal { margin: 10px 0 0; font-size: 13px; }
 
 /* ==== Meterous only ==== */
 
-/* One slim line under the hero: what the toolbar icon is telling you. */
-.toolbar-note { display: flex; align-items: center; justify-content: center; gap: 18px; margin: 0 0 72px; padding: 10px 22px 10px 18px; border-radius: 14px; background: var(--card); border: 1px solid var(--line); }
-.toolbar-note p { margin: 0; color: var(--muted); font-size: 15px; }
-.toolbar-note strong { color: var(--text); font-weight: 600; }
-/* The real toolbar icon, as Safari draws it on most sites: grey ring (weekly), red badge (session). */
-.toolbar-icon { display: block; flex: none; width: 60px; height: 44px; margin-top: -4px; }
-.tb-capsule { fill: var(--line); opacity: 0.55; }
-.tb-track { stroke: var(--muted); opacity: 0.35; }
-.tb-arc { stroke: var(--text); opacity: 0.75; }
-.tb-badge { fill: #ff453a; stroke: var(--card); stroke-width: 2; }
-.tb-badge-text { fill: #fff; font: 700 10.5px -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif; }
+/* Its pictures in the two state cards (the cards themselves are shared): the weekly ring and
+   the session badge. Each card dims the part the other card is about. */
+.tb-track { fill: none; stroke: var(--tb-glyph); stroke-width: 5.2; opacity: 0.25; }
+.tb-ring { fill: none; stroke: var(--tb-glyph); stroke-width: 5.2; stroke-linecap: round; }
+.tb-ring.warning { stroke: #e0a534; }  /* the icon's own amber */
+.tb-badge { fill: #ff3b30; }
+.tb-badge-text { fill: #fff; font: 700 14px -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif; }
+.tb-dim { opacity: 0.3; }
 
 /* The popup is 300px wide, so its screenshot is shown at real size, the way pulseous.app shows
    its 340px popup. At 340px it was blown up 13%, and its text and buttons looked bigger than
    Pulseous's. */
 .hero-shot img { width: 300px; }
+/* Pulseous's popup screenshot is 519px tall, and it sets the height of that site's band. Keeping
+   the same height here puts meterous.app's band, headline and buttons exactly where pulseous.app's
+   are. Side by side only: stacked on narrower screens, each hero is as tall as its own content. */
+@media (min-width: 981px) {
+  .hero-shot { min-height: 519px; display: flex; align-items: center; }
+}
