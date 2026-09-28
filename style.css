@@ -169,3 +169,8 @@ footer .legal { margin: 10px 0 0; font-size: 13px; }
 .tb-arc { stroke: var(--text); opacity: 0.75; }
 .tb-badge { fill: #ff453a; stroke: var(--card); stroke-width: 2; }
 .tb-badge-text { fill: #fff; font: 700 10.5px -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif; }
+
+/* The popup is 300px wide, so its screenshot is shown at real size, the way pulseous.app shows
+   its 340px popup. At 340px it was blown up 13%, and its text and buttons looked bigger than
+   Pulseous's. */
+.hero-shot img { width: 300px; }
